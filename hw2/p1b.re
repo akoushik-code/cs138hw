@@ -1,3 +1,3 @@
-alphabet: {a,b, _ }
-(a)(a*b*)(a) | (b)(a*b*)(b) | (_)
+alphabet: {a,b}
+(a)(a*b*)(a) | (b)(a*b*)(b) | _
 
