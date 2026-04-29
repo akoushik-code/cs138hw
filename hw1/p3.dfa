@@ -1,0 +1,21 @@
+alphabet: {0, 1}
+start: q0
+accepting: {q5}
+//q0 is the intial state
+q0 (0 -> q5)
+q0 (1 -> q1)
+//q1 contains strings such that their binary representation is congruent to 1 mod 5
+q1 (0 -> q2)
+q1 (1 -> q3)
+//q2 contains strings such that their binary representation is congruent to 2 mod 5 
+q2 (0 -> q4)
+q2 (1 -> q5)
+//q3 contains strings such that their binary representation is congruent to 3 mod 5 
+q3 (0 -> q1)
+q3 (1 -> q2)
+//q4 contains strings such that their binary representation is congruent to 4 mod 5 
+q4 (0 -> q3)
+q4 (1 -> q4)
+//q5 contains strings such that their binary representation is divisble by 5, but not the empty string
+q5 (0 -> q5)
+q5 (1 -> q1) 

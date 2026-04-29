@@ -1,0 +1,21 @@
+alphabet: {0, 1}
+start: q0
+accepting: {q2, q4}
+//q0 is the inital state
+q0 (0 -> q1)
+q0 (1 -> q3)
+//q1 contains strings where in  you have only read a single 0 so far 
+q1 (0 -> q2)
+q1 (1 -> q3)
+//q2 accepts any string that starts with 00
+q2 (0 -> q2)
+q2 (1 -> q2)
+//q3 contains a string that doesnt start with 00 and most recent character being a 1 preceded by nothing or a zero 
+q3 (0 -> q5)
+q3 (1 -> q4)
+//q4 accepts any string that ends with 11 and don't start with 00
+q4 (0 -> q5)
+q4 (1 -> q4)
+//q5 contains any string that does not start with 00 with 0 as the most recent character
+q5 (0 -> q5)
+q5 (1 -> q3)

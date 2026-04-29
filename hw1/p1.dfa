@@ -1,0 +1,21 @@
+alphabet: {0, 1}
+start: q0
+accepting: {q4}
+//q0 is the inital state
+q0 (0 -> q1)
+q0 (1 -> q5)
+//q1 is any string where the first character is zero 
+q1 (0 -> q2)
+q1 (1 -> q5)
+//q2 is any string where the first and second characters are zero, and most recent character is a zero 
+q2 (0 -> q2)
+q2 (1 -> q3)
+//q3 is any string where the first two characeters were zero, and the most recent character was a 1 preceded by a zero.   
+q3 (0 -> q2)
+q3 (1 -> q4)
+//q4 is the final state if a string starts with 00 and has a "11" after the 00 at any point, it will reach this state, to stay in this state, no zeros should follow it.  
+q4 (0 -> q2)
+q4 (1 -> q4)
+//q5 will take any string that starts with anything other than "00" 
+q5 (0 -> q5) 
+q5 (1 -> q5)
