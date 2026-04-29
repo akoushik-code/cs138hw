@@ -1,2 +1,2 @@
 alphabet: {a, b}
-(a(aaaa)*b(bbbb)*) | ((aa | bb)((aaaa)* | (bbbb)*))
+(aaaa)* aa (bbbb)*   |   (aaaa)* a (bbbb)* b   |   (aaaa)* (bbbb)* bb   |   (aaaa)* aaa (bbbb)* bbb
